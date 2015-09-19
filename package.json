@@ -1,0 +1,26 @@
+{
+  "name": "hackthehunt_experiment",
+  "version": "1.0.0",
+  "description": "the server for hackthehunt",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paked/hackthehunt.git"
+  },
+  "author": "Harrison Shoebridge <harrison@theshoebridges.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/paked/hackthehunt/issues"
+  },
+  "homepage": "https://github.com/paked/hackthehunt#readme",
+  "dependencies": {
+    "express": "^4.13.3",
+    "jsqrcode": "0.0.6",
+    "multer": "^1.0.4",
+    "restler": "^3.3.0"
+  },
+  "devDependencies": {}
+}

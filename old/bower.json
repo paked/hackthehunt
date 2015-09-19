@@ -16,6 +16,8 @@
   ],
   "dependencies": {
     "firebase": "~2.2.9",
-    "jquery": "~2.1.4"
+    "jquery": "~2.1.4",
+    "angular": "~1.4.6",
+    "angular-route": "~1.4.6"
   }
 }

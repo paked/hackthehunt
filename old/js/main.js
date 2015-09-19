@@ -1,4 +1,5 @@
 var fb = new Firebase("https://glaring-torch-6697.firebaseio.com/");
+var users = fb.child("users");
 
 var API_HOST = "https://hackerapi.com/v1";
 var API_TOKEN = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0MzM5MTUyOTgsImlkIjoyLCJldnQiOlsxXSwidHlwIjoidXNyIn0.USfHFAJ_AYw4hP-wAjiVSWiXbwxPwWLjzzC5oXhVCws";
@@ -15,7 +16,10 @@ $(document).ready(function() {
                 return;
             }
             
-            console.log("Welcome,", data.name);
+            users.push({
+                id: data.id,
+                name: data.name
+            });
         });
     });
 });
