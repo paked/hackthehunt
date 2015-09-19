@@ -14,17 +14,16 @@ app.get('/', function (req, res) {
 });
 
 app.post('/qr_scan', upload.single('qr'), function (req, res, next) {
-      var fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl;
-    restler.post("https://api.qrserver.com/v1/read-qr-code", {
-        // multipart: true,
+    restler.post("http://api.qrserver.com/v1/read-qr-code?outputformat=json", {
+        multipart: true,
         data: {
-            // file: restler.file(req.file.path, null, req.file.size, null, req.file.mimetype)
-            fileurl: fullUrl
+            file: restler.file(req.file.path, null, req.file.size, null, req.file.mimetype)
         }
     }).on("complete", function(data) {
-        console.log(data);
         res.send(data);
     });
+
+    console.log(req.file.size, req.file.mimetype, req.file.path);
 
     console.log(req.file);
 });
