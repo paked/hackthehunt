@@ -1,0 +1,20 @@
+{
+  "name": "hackthehunt",
+  "version": "0.0.0",
+  "homepage": "https://github.com/paked/hackthehunt",
+  "authors": [
+    "Harrison <harrison@theshoebridges.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "./public/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "firebase": "~2.2.9"
+  }
+}
