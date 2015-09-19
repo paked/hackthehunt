@@ -2,12 +2,14 @@ var express = require('express');
 var fs = require('fs');
 var multer  = require('multer');
 var restler = require('restler');
-
+var cors = require('cors');
 var upload = multer({dest: 'uploads/'});
 
 var app = express();
 
 app.use(express.static('public'));
+app.use(cors());
+
 app.get('/', function (req, res) {
     res.send('Hello World!');
 });
