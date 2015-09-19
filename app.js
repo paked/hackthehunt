@@ -14,10 +14,12 @@ app.get('/', function (req, res) {
 });
 
 app.post('/qr_scan', upload.single('qr'), function (req, res, next) {
+      var fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl;
     restler.post("https://api.qrserver.com/v1/read-qr-code", {
-        multipart: true,
+        // multipart: true,
         data: {
-            file: restler.file(req.file.path, null, req.file.size, null, req.file.mimetype)
+            // file: restler.file(req.file.path, null, req.file.size, null, req.file.mimetype)
+            fileurl: fullUrl
         }
     }).on("complete", function(data) {
         console.log(data);
